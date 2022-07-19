@@ -838,7 +838,7 @@
 
   <!--フレースカータ-->
   <t name="フレースカータ12" notice="絶竜詩/前.wav" >
-    <p-sync interval="120">
+    <p-sync interval="50">
       <combatant name="フレースヴェルグ" X="23.72" Z="0" tolerance="0.01" />
     </p-sync>
     <expressions>
@@ -847,7 +847,7 @@
   </t>
   
   <t name="フレースカータ34" notice="絶竜詩/後ろ.wav" >
-    <p-sync interval="120">
+    <p-sync interval="50">
       <combatant name="フレースヴェルグ" X="23.28" Z="0" tolerance="0.01" />
     </p-sync>
     <expressions>
@@ -856,7 +856,7 @@
   </t>
   
   <t name="フレースカータac" notice="絶竜詩/前.wav" >
-    <p-sync interval="120">
+    <p-sync interval="50">
       <combatant name="フレースヴェルグ" X="23.5" Z="0" tolerance="0.01" />
     </p-sync>
     <expressions>
