@@ -671,6 +671,11 @@
   <a time="068" text="AA" />
   <a time="068" text="ロット1回目" sync="ニーズヘッグの「滅殺の誓い」" />
 
+  <a time="070" text="" sync="" notice="" >
+      <expressions>
+      <set name="kata" value="true" />
+    </expressions>
+  </a>
 
   <a time="075" text="邪念の炎" sync="ニーズヘッグの「邪念の炎」" notice="絶竜詩/デバフ確認.wav"/>
   <!--a time="076" text="アク・モーン" sync="ニーズヘッグは「アク・モーン」の構え。" notice="アク・モーン。" /-->
@@ -837,39 +842,49 @@
   </t>
 
   <!--フレースカータ-->
-  <t name="フレースカータ12" notice="絶竜詩/前.wav" >
+  <t name="フレースカータ12" notice="絶竜詩/前.wav" notice-sync="true">
     <p-sync interval="50">
       <combatant name="フレースヴェルグ" X="23.72" Z="0" tolerance="0.01" />
     </p-sync>
     <expressions>
-      <set name="kata" value="mae" />
+      <pre name="kata" value="true" />
+      <set name="kata" value="false" />
     </expressions>
   </t>
   
-  <t name="フレースカータ34" notice="絶竜詩/後ろ.wav" >
+  <t name="フレースカータ34" notice="絶竜詩/後ろ.wav" notice-sync="true">
     <p-sync interval="50">
       <combatant name="フレースヴェルグ" X="23.28" Z="0" tolerance="0.01" />
     </p-sync>
     <expressions>
-      <set name="kata" value="ushiro" />
+      <pre name="kata" value="true" />
+      <set name="kata" value="false" />
     </expressions>
   </t>
   
-  <t name="フレースカータac" notice="絶竜詩/前.wav" >
+  <t name="フレースカータac" notice="絶竜詩/前.wav" notice-sync="true">
     <p-sync interval="50">
       <combatant name="フレースヴェルグ" X="23.5" Z="0" tolerance="0.01" />
     </p-sync>
     <expressions>
-      <set name="kata" value="mae" />
+      <pre name="kata" value="true" />
+      <set name="kata" value="false" />
     </expressions>
   </t>
 
   <!--ヒートテイル、ヒートウィングの判定-->
   <t sync="^14:(6D2B|6D2C)" notice="絶竜詩/ウィング.wav" />
   <t sync="^14:(6D2D|6D2E)" notice="絶竜詩/テイル.wav" />
-  <t sync="^23:[id8]:[mex]:[id8]:フレースヴェルグ:0000:0000:(00C3|00C4)" notice="絶竜詩/氷.wav" />
-  <t sync="^23:[id8]:[mex]:[id8]:ニーズヘッグ:0000:0000:(00C2|00C4)" notice="絶竜詩/炎.wav" />  
+  <t sync="^23:[id8]:[mex]:[id8]:フレースヴェルグ:0000:0000:(00C3|00C4)" notice="絶竜詩/氷.wav" sync-interval="30" />
+  <t sync="^23:[id8]:[mex]:[id8]:ニーズヘッグ:0000:0000:(00C2|00C4)" notice="絶竜詩/炎.wav" sync-interval="30" /> 
   <t sync="^1A:[id8]:[me] gains the effect of _rsv_2896_-1_0_C0_0Status" notice="絶竜詩/滅殺.wav" />
+
+  <t name="フレース削りOK" notice="絶竜詩/フレース70.wav">
+    <hp-sync name="フレースヴェルグ" hpp="70" />
+  </t>
+  <t name="ニーズ削りOK" notice="絶竜詩/ニーズ40.wav">
+    <hp-sync name="ニーズヘッグ" hpp="40" />
+  </t>
 </s>
 
 <s name="騎竜神P">
